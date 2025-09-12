@@ -28,16 +28,13 @@ public class Main {
         symbol = scanner.next().charAt(0);
 
         for (int j = 0; j < rows; j++) {
-
             for (int i = 0; i < columns; i++) {
-
                 System.out.print(symbol);
-
             }
             System.out.println();
         }
 
-            scanner.close();
+        scanner.close();
 
     }
 }
