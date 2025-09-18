@@ -4,27 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(average(1, 2, 3, 4));
+        String[] fruits = {"apple", "orange", "banana"};
+        String[] vegetables = {"potato", "onion", "carrot"};
+        String[] meats = {"chicken", "pork", "beef", "fish"};
 
-    }
+        String[][] groceries = {fruits, vegetables, meats };
 
-//    static int add(int... numbers) {
-//        int sum = 0;
-//
-//        for (int number : numbers) {
-//            sum += number;
-//        }
-//        return sum;
-//
-//    }
-
-    static double average(double... numbers) {
-        double sum = 0;
-
-        for (double number : numbers) {
-            sum += number;
+        for (String[] foods : groceries){
+            for (String food : foods){
+                System.out.print(food + " ");
+            }
+            System.out.println();
         }
-        return sum / numbers.length;
 
     }
 
