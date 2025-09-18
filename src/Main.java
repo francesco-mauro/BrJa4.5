@@ -1,37 +1,19 @@
-import java.util.Scanner;
-
 public class Main {
 
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        String[] foods;
-        int size;
-
-        System.out.print("What number of foods o you want? ");
-        size = scanner.nextInt();
-        scanner.nextLine();
-
-        foods = new String[size];
+        int[] numbers = {1, 9, 2, 8, 3, 5, 4};
+        int target = 2;
 
 
-        for (int i = 0; i < foods.length; i++) {
-            System.out.println("enter a food: ");
-            foods[i] = scanner.nextLine();
+        for (int i = 0; i < numbers.length; i++) {
+            if (target == numbers[i]) {
+                System.out.println("Element found at index: " + i + "\n" + "position: " + (i + 1));
+                break;
+            }
 
         }
-
-        System.out.println("------------------------");
-
-        for (String food : foods) {
-            System.out.println(food);
-        }
-
-//        System.out.println(foods.length);
-
-        scanner.close();
 
 
     }
