@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -33,6 +34,44 @@ public class Main {
         };
 
 
+        int[] answers = {3, 1, 2, 4, 3};
+        int score = 0;
+        int guess;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("******************************");
+        System.out.println("Welcome to the Java Quiz Game!");
+        System.out.println("******************************");
+
+        for (int i = 0; i < questions.length; i++) {
+            System.out.println(questions[i]);
+
+            for (String option : options[i]){
+                System.out.println(option);
+            }
+
+            System.out.println("Enter your guess: ");
+            guess = scanner.nextInt();
+
+            if (guess == answers[i]){
+                System.out.println("********");
+                System.out.println("CORRECT!");
+                System.out.println("********");
+                score++;
+
+            } else {
+                System.out.println("********");
+                System.out.println("WRONG!");
+                System.out.println("********");
+            }
+
+        }
+
+        System.out.println("Your final score is: " + score + " out of " +questions.length);
+
+
+        scanner.close();
     }
 
 }
